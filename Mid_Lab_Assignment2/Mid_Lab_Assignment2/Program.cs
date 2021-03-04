@@ -95,11 +95,45 @@ namespace Mid_Lab_Assignment2
                                 Console.Write("\t\t||\tEnter You Account Number : ");
                                 int accountNumber = Convert.ToInt32(Console.ReadLine());
                                 int found = bank.SearchAccount(accountNumber);
-                                if (two == "deposit")
+                                if (found >= 0)
                                 {
-                                    Console.Write("\t\t||Enter the amount you want to withdraw : ");
-                                    double amount = Convert.ToDouble(Console.ReadLine());
-                                    bank.Transaction(two, found, amount);
+                                    if (two == "deposit")
+                                    {
+                                        Console.Write("\t\t||Enter the amount you want to withdraw : ");
+                                        double amount = Convert.ToDouble(Console.ReadLine());
+                                        bank.Transaction(two, found, amount);
+                                    }
+                                    else if (two == "withdraw")
+                                    {
+                                        Console.Write("\t\t||Enter the amount you want to withdraw : ");
+                                        double amount = Convert.ToDouble(Console.ReadLine());
+                                        bank.Transaction(two, found, amount);
+                                    }
+                                    else if (two == "transfer")
+                                    {
+                                        Console.Write("\t\t||Enter Receiver Account Number : ");
+                                        int recAccountNumber = Convert.ToInt32(Console.ReadLine());
+                                        int search = bank.SearchAccount(recAccountNumber);
+                                        if (search == found)
+                                        {
+                                            Console.WriteLine("\t\t||The receiver Account Number is your.....");
+                                        }
+                                        else if (search >= 0)
+                                        {
+                                            Console.Write("\t\t||Enter the amount you want to Transfer : ");
+                                            double amount = Convert.ToDouble(Console.ReadLine());
+                                            bank.Transaction(two, found, search, amount);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\t\t||\tInvalid Input......");
+                                            
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\t\t||\tInvalid Inout.....");
                                 }
                             }
 
