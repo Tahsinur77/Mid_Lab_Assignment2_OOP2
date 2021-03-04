@@ -13,7 +13,7 @@ namespace Mid_Lab_Assignment2
         protected double balance;
         private string dateOfBirth;
         private Address address;
-        private int transactions;
+        
 
         static int x = 1;
         public Account(string accountName,string dateOfBirth, double balance, Address address)
@@ -24,10 +24,6 @@ namespace Mid_Lab_Assignment2
             this.balance = balance;
             this.address = address;
             x++;
-        }
-        public int Transactions
-        {
-            get { return this.transactions; }
         }
         public int AccountNumber
         {
