@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Mid_Lab_Assignment2
 {
-    class Account
+    abstract class Account
     {
         private int accountNumber;
         private string accountName;
-        private double balance;
+        protected double balance;
         private string dateOfBirth;
         private Address address;
 
@@ -60,21 +60,6 @@ namespace Mid_Lab_Assignment2
             }
             else Console.WriteLine("Can Not Deposit......");
         }
-        public void Transfer(Account receiver, double amount)
-        {
-            if (amount > 0 && amount <= balance)
-            {
-                Console.WriteLine("Previous Balance : {0}\nTransfer Amount: {1}", balance, amount);
-                this.balance -= amount;
-                receiver.balance += amount;
-                Console.WriteLine("Current Balance: " + this.balance);
-            }
-            else Console.WriteLine("Can Not Transfer.....");
-        }
-        public void ShowAccountInformation()
-        {
-            Console.WriteLine("Account Number : {0}\nAccount Name: {1}\nBalance : {2}", this.accountNumber, this.accountName, this.balance);
-            address.GetAddress();
-        }
+        public abstract void Transfer(Account receiver, double amount);
     }
 }
