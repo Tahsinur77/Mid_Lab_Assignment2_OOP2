@@ -130,10 +130,18 @@ namespace Mid_Lab_Assignment2
                                             
                                         }
                                     }
+                                    else if (two == "show")
+                                    {
+                                        bank.PrintAccountDetails(found);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("\t\t||\tInvalid Input......");
+                                    }
                                 }
                                 else
                                 {
-                                    Console.WriteLine("\t\t||\tInvalid Inout.....");
+                                    Console.WriteLine("\t\t||\tInvalid Account Number.....");
                                 }
                             }
 
