@@ -79,8 +79,32 @@ namespace Mid_Lab_Assignment2
                         }
                         goto case "quit";
                     case "account":
+                        while (true)
+                        {
+                            Console.WriteLine("Command For selecting Operation:");
+                            Console.WriteLine("deposit => Make a deposit\nwithdraw => Make a withdrawal\ntransfer => Make a transfer");
+                            Console.WriteLine("show =>Show the number transactions and balance\nquit Exit => the application");
+                            string two = Console.ReadLine();
+                            
+                            if (two == "quit")
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                Console.Write("\t\t||\tEnter You Account Number : ");
+                                int accountNumber = Convert.ToInt32(Console.ReadLine());
+                                int found = bank.SearchAccount(accountNumber);
+                                if (two == "deposit")
+                                {
+                                    Console.Write("\t\t||Enter the amount you want to withdraw : ");
+                                    double amount = Convert.ToDouble(Console.ReadLine());
+                                    bank.Transaction(two, found, amount);
+                                }
+                            }
 
-                        break;
+                        }
+                        goto case "quit";
                     case "quit":
                         check = 1;
                         break;
