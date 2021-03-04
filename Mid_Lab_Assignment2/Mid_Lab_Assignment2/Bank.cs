@@ -36,17 +36,17 @@ namespace Mid_Lab_Assignment2
             else Console.WriteLine("Can not add.....");
         }
        
-        public void Transaction(int transactionType, params dynamic[] x)
+        public void Transaction(string transactionType, params dynamic[] x)
         {
-            if (transactionType == 1)
+            if (transactionType == "withdraw")
             {
                 myBank[x[0]].Withdraw(x[1]);
             }
-            else if (transactionType == 2)
+            else if (transactionType == "deposit")
             {
                 myBank[x[0]].Deposit(x[1]);
             }
-            else if (transactionType == 3)
+            else if (transactionType == "transfer")
             {
                 myBank[x[0]].Transfer(myBank[x[1]], x[2]);
             }
