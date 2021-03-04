@@ -12,6 +12,7 @@ namespace Mid_Lab_Assignment2
         {
             Console.WriteLine("Welcome To our Bank");
             Bank bank = new Bank();
+            int check = 0;
             while (true)
             {
                 Console.WriteLine("Type to select :");
@@ -20,61 +21,74 @@ namespace Mid_Lab_Assignment2
                 switch (type)
                 {
                     case "open":
-                        Console.WriteLine("Command For selecting Operation:");
-                        Console.WriteLine("savings => Open a savings account\nchecking => Open a checking account\nquit => Exit the application");
-                        string one = Console.ReadLine();
-                        if (one == "savings")
+                        while (true)
                         {
-                            Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
-                            string accountName = Console.ReadLine();
-                            Console.Write("\t\t||\tDate of Birth : ");
-                            string dateOfBirth = Console.ReadLine();
-                            Console.Write("\t\t||\tBalance : ");
-                            double balance = Convert.ToDouble(Console.ReadLine());
-                            Console.Write("\t\t||\tAddress :\n\t\t||\t\tRoad No. : ");
-                            string roadNo = Console.ReadLine();
-                            Console.Write("\t\t||\t\tHouse No. : ");
-                            string houseNo = Console.ReadLine();
-                            Console.Write("\t\t||\t\tCity : ");
-                            string city = Console.ReadLine();
-                            Console.Write("\t\t||\t\tCountry : ");
-                            string country = Console.ReadLine();
-                            Account acc;
-                            acc = new SavingAccount(accountName, dateOfBirth, balance, new Address(roadNo, houseNo, city, country));
-                            bank.AddAccount(acc);
-                        }
-                        else if (one == "checking")
-                        {
-                            Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
-                            string accountName = Console.ReadLine();
-                            Console.Write("\t\t||\tDate of Birth : ");
-                            string dateOfBirth = Console.ReadLine();
-                            Console.Write("\t\t||\tBalance : ");
-                            double balance = Convert.ToDouble(Console.ReadLine());
-                            Console.Write("\t\t||\tAddress :\n\t\t||\t\tRoad No. : ");
-                            string roadNo = Console.ReadLine();
-                            Console.Write("\t\t||\t\tHouse No. : ");
-                            string houseNo = Console.ReadLine();
-                            Console.Write("\t\t||\t\tCity : ");
-                            string city = Console.ReadLine();
-                            Console.Write("\t\t||\t\tCountry : ");
-                            string country = Console.ReadLine();
-                            Account acc;
-                            acc = new CheckingAccount(accountName, dateOfBirth, balance, new Address(roadNo, houseNo, city, country));
-                            bank.AddAccount(acc);
+                            Console.WriteLine("Command For selecting Operation:");
+                            Console.WriteLine("savings => Open a savings account\nchecking => Open a checking account\nquit => Exit the application");
+                            string one = Console.ReadLine();
+                            if (one == "savings")
+                            {
+                                Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
+                                string accountName = Console.ReadLine();
+                                Console.Write("\t\t||\tDate of Birth : ");
+                                string dateOfBirth = Console.ReadLine();
+                                Console.Write("\t\t||\tBalance : ");
+                                double balance = Convert.ToDouble(Console.ReadLine());
+                                Console.Write("\t\t||\tAddress :\n\t\t||\t\tRoad No. : ");
+                                string roadNo = Console.ReadLine();
+                                Console.Write("\t\t||\t\tHouse No. : ");
+                                string houseNo = Console.ReadLine();
+                                Console.Write("\t\t||\t\tCity : ");
+                                string city = Console.ReadLine();
+                                Console.Write("\t\t||\t\tCountry : ");
+                                string country = Console.ReadLine();
+                                Account acc;
+                                acc = new SavingAccount(accountName, dateOfBirth, balance, new Address(roadNo, houseNo, city, country));
+                                bank.AddAccount(acc);
+                            }
+                            else if (one == "checking")
+                            {
+                                Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
+                                string accountName = Console.ReadLine();
+                                Console.Write("\t\t||\tDate of Birth : ");
+                                string dateOfBirth = Console.ReadLine();
+                                Console.Write("\t\t||\tBalance : ");
+                                double balance = Convert.ToDouble(Console.ReadLine());
+                                Console.Write("\t\t||\tAddress :\n\t\t||\t\tRoad No. : ");
+                                string roadNo = Console.ReadLine();
+                                Console.Write("\t\t||\t\tHouse No. : ");
+                                string houseNo = Console.ReadLine();
+                                Console.Write("\t\t||\t\tCity : ");
+                                string city = Console.ReadLine();
+                                Console.Write("\t\t||\t\tCountry : ");
+                                string country = Console.ReadLine();
+                                Account acc;
+                                acc = new CheckingAccount(accountName, dateOfBirth, balance, new Address(roadNo, houseNo, city, country));
+                                bank.AddAccount(acc);
 
+                            }
+                            else if (one == "quit")
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid Input...");
+                            }
+                            
                         }
-                        break;
+                        goto case "quit";
                     case "account":
 
                         break;
                     case "quit":
-
+                        check = 1;
                         break;
                     default:
                         break;
 
                 }
+                if (check == 1) break;
             }
         }
     }
