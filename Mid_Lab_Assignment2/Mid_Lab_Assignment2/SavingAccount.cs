@@ -8,7 +8,7 @@ namespace Mid_Lab_Assignment2
 {
     class SavingAccount : Account
     {
-        public SavingAccount(int accountNumber, string accountName, string dateOfBirth, double balance, Address address):base(accountNumber,accountName,dateOfBirth,balance,address)
+        public SavingAccount( string accountName, string dateOfBirth, double balance, Address address):base(accountName,dateOfBirth,balance,address)
         { 
         }
         public override void Withdraw(double amount)

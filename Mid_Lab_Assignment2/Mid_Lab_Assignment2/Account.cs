@@ -13,15 +13,21 @@ namespace Mid_Lab_Assignment2
         protected double balance;
         private string dateOfBirth;
         private Address address;
+        private int transactions;
 
-        public Account(int accountNumber, string accountName,string dateOfBirth, double balance, Address address)
+        static int x = 1;
+        public Account(string accountName,string dateOfBirth, double balance, Address address)
         {
             this.accountName = accountName;
-            this.accountNumber = accountNumber;
+            this.accountNumber = x;
             this.dateOfBirth = dateOfBirth;
             this.balance = balance;
             this.address = address;
-
+            x++;
+        }
+        public int Transactions
+        {
+            get { return this.transactions; }
         }
         public int AccountNumber
         {
@@ -61,5 +67,11 @@ namespace Mid_Lab_Assignment2
             else Console.WriteLine("Can Not Deposit......");
         }
         public abstract void Transfer(Account receiver, double amount);
+
+        public void ShowAccountInformation()
+        {
+            Console.WriteLine("Account Number : {0}\nAccount Name: {1}\nBalance : {2}", this.accountNumber, this.accountName, this.balance);
+            address.GetAddress();
+        }
     }
 }

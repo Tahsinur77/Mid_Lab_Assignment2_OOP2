@@ -8,7 +8,7 @@ namespace Mid_Lab_Assignment2
 {
     class CheckingAccount:Account
     {
-        public CheckingAccount(int accountNumber, string accountName, string dateOfBirth, double balance, Address address) : base(accountNumber, accountName, dateOfBirth, balance, address)
+        public CheckingAccount( string accountName, string dateOfBirth, double balance, Address address) : base(accountName, dateOfBirth, balance, address)
         {
         }
         public override void Withdraw(double amount)
