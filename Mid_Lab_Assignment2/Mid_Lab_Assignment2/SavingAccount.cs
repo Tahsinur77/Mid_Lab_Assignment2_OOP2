@@ -23,7 +23,7 @@ namespace Mid_Lab_Assignment2
         }
         public override void Transfer(Account receiver, double amount)
         {
-            if (amount > 0 && amount <= base.balance)
+            if (amount > 0 && amount < base.balance)
             {
                 Console.WriteLine("Previous Balance : {0}\nTransfer Amount: {1}", base.balance, amount);
                 base.balance -= amount;
