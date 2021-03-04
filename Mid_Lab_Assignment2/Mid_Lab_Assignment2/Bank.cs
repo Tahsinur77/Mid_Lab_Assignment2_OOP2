@@ -10,7 +10,10 @@ namespace Mid_Lab_Assignment2
     {
         private Account[] myBank = new Account[100];
 
-   
+        public Bank()
+        {
+
+        }
         public Account[] MyBank
         {
             get { return this.myBank; }
