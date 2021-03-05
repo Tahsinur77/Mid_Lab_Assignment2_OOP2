@@ -30,10 +30,12 @@ namespace Mid_Lab_Assignment2
                         bool version1 = false;
                         while (true)
                         {
-                            Console.WriteLine("Command For selecting Operation:");
-                            Console.WriteLine("savings => Open a savings account\nchecking => Open a checking account\nquit => Exit the application");
+                            Console.WriteLine("\n\t\t============================================================");
+                            Console.WriteLine("\t\t||\tCommand For selecting Operation:");
+                            Console.Write("\t\t||\tsavings => Open a savings account\n\t\t||\tchecking => Open a checking account\n\t\t||\tquit => Exit the application\n\t\t||Enter : ");
                             string one = Console.ReadLine();
-                            switch(one)
+                            Console.WriteLine("\t\t============================================================");
+                            switch (one)
                             {
                                 case "savings":
                                     Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
