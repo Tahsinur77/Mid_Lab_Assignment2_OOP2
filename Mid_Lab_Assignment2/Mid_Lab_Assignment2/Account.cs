@@ -64,10 +64,6 @@ namespace Mid_Lab_Assignment2
         }
         public abstract void Transfer(Account receiver, double amount);
 
-        public void ShowAccountInformation()
-        {
-            Console.WriteLine("Account Number : {0}\nAccount Name: {1}\nBalance : {2}", this.accountNumber, this.accountName, this.balance);
-            address.GetAddress();
-        }
+        public abstract void Show();
     }
 }
