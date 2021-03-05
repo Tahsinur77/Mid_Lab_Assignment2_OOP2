@@ -38,6 +38,7 @@ namespace Mid_Lab_Assignment2
                             switch (one)
                             {
                                 case "savings":
+                                    Console.WriteLine("\n\t\t============================================================");
                                     Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
                                     string accountName1 = Console.ReadLine();
                                     Console.Write("\t\t||\tDate of Birth : ");
@@ -55,8 +56,10 @@ namespace Mid_Lab_Assignment2
                                     Account acc1;
                                     acc1 = new SavingAccount(accountName1, dateOfBirth1, balance1, new Address(roadNo1, houseNo1, city1, country1));
                                     bank.AddAccount(acc1);
+                                    Console.WriteLine("\t\t============================================================");
                                     break;
                                 case "checking":
+                                    Console.WriteLine("\n\t\t============================================================");
                                     Console.Write("\t\t||Enter Account : \n\t\t||\tName : ");
                                     string accountName2 = Console.ReadLine();
                                     Console.Write("\t\t||\tDate of Birth : ");
@@ -74,6 +77,7 @@ namespace Mid_Lab_Assignment2
                                     Account acc2;
                                     acc2 = new CheckingAccount(accountName2, dateOfBirth2, balance2, new Address(roadNo2, houseNo2, city2, country2));
                                     bank.AddAccount(acc2);
+                                    Console.WriteLine("\t\t============================================================");
                                     break;
                                 case "quit":
                                     version1 = true;
