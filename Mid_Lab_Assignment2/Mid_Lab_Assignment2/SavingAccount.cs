@@ -41,5 +41,9 @@ namespace Mid_Lab_Assignment2
             }
             else Console.WriteLine("Can Not Transfer.....");
         }
+        public void Show()
+        {
+            Console.WriteLine("Number of transactions : "+transactions);
+        }
     }
 }
