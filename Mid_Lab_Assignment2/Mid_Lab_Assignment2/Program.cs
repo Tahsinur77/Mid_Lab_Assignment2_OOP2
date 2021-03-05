@@ -101,7 +101,7 @@ namespace Mid_Lab_Assignment2
                                 {
                                     if (two == "deposit")
                                     {
-                                        Console.Write("\t\t||Enter the amount you want to withdraw : ");
+                                        Console.Write("\t\t||Enter the amount you want to deposit : ");
                                         double amount = Convert.ToDouble(Console.ReadLine());
                                         bank.Transaction(two, found, amount);
                                     }
@@ -148,7 +148,7 @@ namespace Mid_Lab_Assignment2
                             }
 
                         }
-                        goto case "quit";
+                        break;
                     case "quit":
                         check  = true;
                         break;
