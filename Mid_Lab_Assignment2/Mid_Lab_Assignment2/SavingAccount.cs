@@ -9,15 +9,11 @@ namespace Mid_Lab_Assignment2
     
     class SavingAccount : Account
     {
-        private int transactions;
+        
         public SavingAccount( string accountName, string dateOfBirth, double balance, Address address):base(accountName,dateOfBirth,balance,address)
         { 
         }
-        public int Transactions
-        {
-            set { this.transactions = value; }
-            get { return this.transactions; }
-        }
+        
         public override void Withdraw(double amount)
         {
             if (amount > 0 && amount < base.balance)
@@ -25,7 +21,7 @@ namespace Mid_Lab_Assignment2
                 Console.WriteLine("Previous Balance : {0}\nWithdraw Amount: {1}", balance, amount);
                 base.balance -= amount;
                 Console.WriteLine("Current Balance: " + base.balance);
-                this.transactions++;
+                base.transactions++;
             }
             else Console.WriteLine("Can Not Withdraw.....");
         }
@@ -37,12 +33,13 @@ namespace Mid_Lab_Assignment2
                 base.balance -= amount;
                 receiver.Balance += amount;
                 Console.WriteLine("Current Balance: " + base.balance);
-                this.transactions++;
+                base.transactions++;
             }
             else Console.WriteLine("Can Not Transfer.....");
         }
-        public void Show()
+        public override void Show()
         {
+            Console.WriteLine("Balance : " + base.balance);
             Console.WriteLine("Number of transactions : "+transactions);
         }
     }

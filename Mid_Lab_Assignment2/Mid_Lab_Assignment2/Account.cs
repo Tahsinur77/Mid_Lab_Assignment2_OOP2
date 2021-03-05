@@ -13,7 +13,8 @@ namespace Mid_Lab_Assignment2
         protected double balance;
         private string dateOfBirth;
         private Address address;
-        
+        protected int transactions;
+
 
         static int x = 1;
         public Account(string accountName,string dateOfBirth, double balance, Address address)
@@ -34,6 +35,11 @@ namespace Mid_Lab_Assignment2
         {
             set { this.accountName = value; }
             get { return this.accountName; }
+        }
+        public int Transactions
+        {
+            set { this.transactions = value; }
+            get { return this.transactions; }
         }
         public string DateOfBirth
         {
@@ -59,6 +65,7 @@ namespace Mid_Lab_Assignment2
                 Console.WriteLine("Previous Balance : {0}\nDeposit Amount: {1}", balance, amount);
                 this.balance += amount;
                 Console.WriteLine(" Balance: " + this.balance);
+                this.transactions++;
             }
             else Console.WriteLine("Can Not Deposit......");
         }

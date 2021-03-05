@@ -73,7 +73,7 @@ namespace Mid_Lab_Assignment2
         }
         public void PrintAccountDetails(int index)
         {
-            myBank[index].ShowAccountInformation();
+            myBank[index].Show();
 
         }
     }

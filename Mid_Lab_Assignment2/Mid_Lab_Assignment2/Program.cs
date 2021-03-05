@@ -85,7 +85,7 @@ namespace Mid_Lab_Assignment2
                         {
                             Console.WriteLine("Command For selecting Operation:");
                             Console.WriteLine("deposit => Make a deposit\nwithdraw => Make a withdrawal\ntransfer => Make a transfer");
-                            Console.WriteLine("show =>Show the number transactions and balance\nquit Exit => the application");
+                            Console.WriteLine("show =>Show the number transactions and balance\nquit => Exit the application");
                             string two = Console.ReadLine();
                             
                             if (two == "quit")
