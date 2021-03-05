@@ -10,9 +10,9 @@ namespace Mid_Lab_Assignment2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\t\t\t==============================================");
-            Console.WriteLine("\t\t\t||\t\tWelcome To our Bank\n\t\t\t||\tHope you Will Enjoy our Setvices\n\t\t\t||\t     Stay with us and Be happy");
-            Console.WriteLine("\t\t\t==============================================");
+            Console.WriteLine("\t\t\t==================================================");
+            Console.WriteLine("\t\t\t||\t\tWelcome To our Bank\t\t||\n\t\t\t||\tHope you Will Enjoy our Setvices\t||\n\t\t\t||\t     Stay with us and Be happy\t\t||");
+            Console.WriteLine("\t\t\t==================================================");
             Bank bank = new Bank();
             bool check = false;
             while (true)
@@ -96,9 +96,10 @@ namespace Mid_Lab_Assignment2
                             Console.WriteLine("\n\t\t============================================================");
                             Console.WriteLine("\t\t||\tCommand For selecting Operation:");
                             Console.WriteLine("\t\t||\tdeposit => Make a deposit\n\t\t||\twithdraw => Make a withdrawal\n\t\t||\ttransfer => Make a transfer");
-                            Console.WriteLine("\t\t||\tshow =>Show the number transactions and balance\n\t\t||\tquit => Exit the application\t\t||Enter : ");
+                            Console.Write("\t\t||\tshow =>Show the number transactions and balance\n\t\t||\tquit => Exit the application\n\t\t||Enter : ");
                             string two = Console.ReadLine();
                             Console.WriteLine("\t\t============================================================");
+                            Console.WriteLine("\n\t\t============================================================");
 
                             if (two == "quit")
                             {
@@ -113,28 +114,28 @@ namespace Mid_Lab_Assignment2
                                 {
                                     if (two == "deposit")
                                     {
-                                        Console.Write("\t\t||Enter the amount you want to deposit : ");
+                                        Console.Write("\t\t||\tEnter the amount you want to deposit : ");
                                         double amount = Convert.ToDouble(Console.ReadLine());
                                         bank.Transaction(two, found, amount);
                                     }
                                     else if (two == "withdraw")
                                     {
-                                        Console.Write("\t\t||Enter the amount you want to withdraw : ");
+                                        Console.Write("\t\t||\tEnter the amount you want to withdraw : ");
                                         double amount = Convert.ToDouble(Console.ReadLine());
                                         bank.Transaction(two, found, amount);
                                     }
                                     else if (two == "transfer")
                                     {
-                                        Console.Write("\t\t||Enter Receiver Account Number : ");
+                                        Console.Write("\t\t||\tEnter Receiver Account Number : ");
                                         int recAccountNumber = Convert.ToInt32(Console.ReadLine());
                                         int search = bank.SearchAccount(recAccountNumber);
                                         if (search == found)
                                         {
-                                            Console.WriteLine("\t\t||The receiver Account Number is your.....");
+                                            Console.WriteLine("\t\t||\tThe receiver Account Number is your.....");
                                         }
                                         else if (search >= 0)
                                         {
-                                            Console.Write("\t\t||Enter the amount you want to Transfer : ");
+                                            Console.Write("\t\t||\tEnter the amount you want to Transfer : ");
                                             double amount = Convert.ToDouble(Console.ReadLine());
                                             bank.Transaction(two, found, search, amount);
                                         }
@@ -158,6 +159,7 @@ namespace Mid_Lab_Assignment2
                                     Console.WriteLine("\t\t||\tInvalid Account Number.....");
                                 }
                             }
+                            Console.WriteLine("\t\t============================================================");
 
                         }
                         break;
@@ -165,6 +167,9 @@ namespace Mid_Lab_Assignment2
                         check  = true;
                         break;
                     default:
+                        Console.WriteLine("\n\t\t=======================================");
+                        Console.WriteLine("\t\t||\tInvalid Input....\t     ||");
+                        Console.WriteLine("\t\t=======================================");
                         break;
 
                 }

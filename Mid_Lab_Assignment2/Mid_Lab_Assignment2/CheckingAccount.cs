@@ -15,6 +15,7 @@ namespace Mid_Lab_Assignment2
         {
             if (amount > 0 && amount <= base.balance)
             {
+                Console.WriteLine("\t\t||\n\t\t||\tWithdraw Sucessful...");
                 Console.WriteLine("\t\t||\tPrevious Balance : {0}\n\t\t||\tWithdraw Amount: {1}", balance, amount);
                 base.balance -= amount;
                 Console.WriteLine("\t\t||\tCurrent Balance: " + base.balance);
@@ -26,6 +27,7 @@ namespace Mid_Lab_Assignment2
         {
             if (amount > 0 && amount <= base.balance)
             {
+                Console.WriteLine("\t\t||\n\t\t||\tTransfer Sucessful...");
                 Console.WriteLine("\t\t||\tPrevious Balance : {0}\n\t\t||\tTransfer Amount: {1}", base.balance, amount);
                 base.balance -= amount;
                 receiver.Balance += amount;
