@@ -10,15 +10,19 @@ namespace Mid_Lab_Assignment2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To our Bank");
+            Console.WriteLine("\t\t\t==============================================");
+            Console.WriteLine("\t\t\t||\t\tWelcome To our Bank\n\t\t\t||\tHope you Will Enjoy our Setvices\n\t\t\t||\t     Stay with us and Be happy");
+            Console.WriteLine("\t\t\t==============================================");
             Bank bank = new Bank();
             bool check = false;
             while (true)
             {
-                Console.WriteLine("Type to select :");
-                Console.WriteLine("open => Open a Bank account\naccount => Perform transactions on an account\nquit => Exit the application");
+                Console.WriteLine("\n\t\t============================================================");
+                Console.WriteLine("\t\t||\tType to select :");
+                Console.Write("\t\t||\topen => Open a Bank account\n\t\t||\taccount => Perform transactions on an account\n\t\t||\tquit => Exit the application\n\t\t||Enter : ");
                 string type = Console.ReadLine();
-                
+                Console.WriteLine("\t\t============================================================");
+
                 switch (type)
                 { 
                     case "open":
