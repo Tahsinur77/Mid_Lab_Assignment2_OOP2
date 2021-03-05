@@ -46,8 +46,8 @@ namespace Mid_Lab_Assignment2
 
         public void GetAddress()
         {
-            Console.WriteLine("Address =>");
-            Console.WriteLine("Road No. : {0} \nHouse No. : {1}\nCity : {2}\nCountry : {3}", roadNo, houseNo, city, country);
+            Console.WriteLine("\t\t||\tAddress =>");
+            Console.WriteLine("\n\t\t||\t\tRoad No. : {0}\n\t\t||\t\tHouse No. : {1}\n\t\t||\t\tCity : {2}\n\t\t||\t\tCountry : {3}", roadNo, houseNo, city, country);
 
         }
     }

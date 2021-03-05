@@ -32,8 +32,8 @@ namespace Mid_Lab_Assignment2
                     break;
                 }
             }
-            if (flag) Console.WriteLine("Account Added....\nYour Account Number = {0} ", myBank[num].AccountNumber);
-            else Console.WriteLine("Can not add.....");
+            if (flag) Console.WriteLine("\t\t||\tAccount Opened....\n\t\t||\tYour Account Number = {0} ", myBank[num].AccountNumber);
+            else Console.WriteLine("\t\t||\tCan not open your account.....");
         }
        
         public void Transaction(string transactionType, params dynamic[] x)
@@ -52,7 +52,7 @@ namespace Mid_Lab_Assignment2
             }
             else
             {
-                Console.WriteLine("You gave a wrong input....");
+                Console.WriteLine("\t\t||\tInvalid Input.........");
             }
         }
         public int SearchAccount(int accountNumber)

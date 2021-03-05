@@ -62,12 +62,12 @@ namespace Mid_Lab_Assignment2
         {
             if (amount > 0)
             {
-                Console.WriteLine("Previous Balance : {0}\nDeposit Amount: {1}", balance, amount);
+                Console.WriteLine("\t\t||\tPrevious Balance : {0}\n\t\t||\tDeposit Amount: {1}", balance, amount);
                 this.balance += amount;
-                Console.WriteLine(" Balance: " + this.balance);
+                Console.WriteLine("\t\t||\tCurrent Balance: " + this.balance);
                 this.transactions++;
             }
-            else Console.WriteLine("Can Not Deposit......");
+            else Console.WriteLine("\t\t||\tCan Not Deposit......");
         }
         public abstract void Transfer(Account receiver, double amount);
 
