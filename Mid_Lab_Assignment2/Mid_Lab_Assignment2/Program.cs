@@ -11,7 +11,7 @@ namespace Mid_Lab_Assignment2
         static void Main(string[] args)
         {
             Console.WriteLine("\t\t\t==================================================");
-            Console.WriteLine("\t\t\t||\t\tWelcome To our Bank\t\t||\n\t\t\t||\tHope you Will Enjoy our Setvices\t||\n\t\t\t||\t     Stay with us and Be happy\t\t||");
+            Console.WriteLine("\t\t\t||\t\tWelcome To our Bank\t\t||\n\t\t\t||\tHope you Will Enjoy our Services\t||\n\t\t\t||\t     Stay with us and Be happy\t\t||");
             Console.WriteLine("\t\t\t==================================================");
             Bank bank = new Bank();
             bool check = false;
