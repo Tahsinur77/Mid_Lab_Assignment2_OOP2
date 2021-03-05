@@ -93,11 +93,13 @@ namespace Mid_Lab_Assignment2
                     case "account":
                         while (true)
                         {
-                            Console.WriteLine("Command For selecting Operation:");
-                            Console.WriteLine("deposit => Make a deposit\nwithdraw => Make a withdrawal\ntransfer => Make a transfer");
-                            Console.WriteLine("show =>Show the number transactions and balance\nquit => Exit the application");
+                            Console.WriteLine("\n\t\t============================================================");
+                            Console.WriteLine("\t\t||\tCommand For selecting Operation:");
+                            Console.WriteLine("\t\t||\tdeposit => Make a deposit\n\t\t||\twithdraw => Make a withdrawal\n\t\t||\ttransfer => Make a transfer");
+                            Console.WriteLine("\t\t||\tshow =>Show the number transactions and balance\n\t\t||\tquit => Exit the application\t\t||Enter : ");
                             string two = Console.ReadLine();
-                            
+                            Console.WriteLine("\t\t============================================================");
+
                             if (two == "quit")
                             {
                                 break;
