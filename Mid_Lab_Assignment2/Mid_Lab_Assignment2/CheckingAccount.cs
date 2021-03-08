@@ -33,6 +33,7 @@ namespace Mid_Lab_Assignment2
                 receiver.Balance += amount;
                 Console.WriteLine("\t\t||\tCurrent Balance: " + base.balance);
                 base.transactions++;
+                receiver.Transactions++;
             }
             else Console.WriteLine("\t\t||\tCan Not Transfer.....");
         }
